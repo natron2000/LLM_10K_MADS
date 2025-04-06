@@ -70,7 +70,7 @@ def main():
     def submit():
         prompt = prompt_entry.get("1.0", tk.END).strip()
 
-        # If User Make A Change Requiring Re-Running setup_retrieval_qa
+        # If User Make a Change Requiring Re-Running setup_retrieval_qa
         if ticker != ticker_var.get() or k == num_docs_var.get():
             qa_chain = setup_retrieval_qa(ticker = ticker_var.get(), k = num_docs_var.get())
 
