@@ -15,19 +15,12 @@ Enough computing power to run DeepSeek-R1
 ## Package Structure
 
 ├── GUI_Images                        # Example Image of GUI
-
 ├── Main_Code                         
-
 │   ├── cap_1_meta.py                 # Define S&P 500 Universe and Create Meta Fields
-
 │   ├── cap_2_down.py                 # Download 10-K reports
-
 │   ├── cap_3_store.py                # Store 10-K reports in ChromaDB database
-
 │   ├── cap_4_chat.py                 # Create/Run GUI for LLM
-
 ├── Model_Evaluation                  
-
 │   ├── response_dics                 # .............
 │   ├── score_dicts                   # .............
 │   ├── ChromaDB_Analysis.ipynb       # Analysis on ChromaDB chunking results
