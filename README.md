@@ -20,7 +20,7 @@ Enough computing power to run DeepSeek-R1
 │   ├── cap_2_down.py                 # Download 10-K reports
 │   ├── cap_3_store.py                # Store 10-K reports in ChromaDB database
 │   ├── cap_4_chat.py                 # Create/Run GUI for LLM
-├── Model_Evaluation                  # Source files (alternatively `lib` or `app`)
+├── Model_Evaluation                  
 │   ├── response_dics                 # .............
 │   ├── score_dicts                   # .............
 │   ├── ChromaDB_Analysis.ipynb       # Analysis on ChromaDB chunking results
