@@ -21,12 +21,12 @@ Enough computing power to run DeepSeek-R1
 │   ├── cap_3_store.py                # Store 10-K reports in ChromaDB database  
 │   ├── cap_4_chat.py                 # Create/Run GUI for LLM  
 ├── Model_Evaluation                  
-│   ├── response_dics                 # .............  
-│   ├── score_dicts                   # .............  
+│   ├── response_dics                 # Responses of different RAG structures to test question set  
+│   ├── score_dicts                   # Scores of the RAG's responses
 │   ├── ChromaDB_Analysis.ipynb       # Analysis on ChromaDB chunking results  
-│   ├── generate_response_dict.ipynb  # .............  
-│   ├── generate_score_dict.ipynb     # .............  
-│   ├── model_comparisons.ipynb       # .............      
+│   ├── generate_response_dict.ipynb  # Feeds test question set into RAGs to produce files in response_dicts
+│   ├── generate_score_dict.ipynb     # Evaluates the responses from response_dicts and stores the results in score_dicts
+│   ├── model_comparisons.ipynb       # Graphs showing comparison of various RAG structures     
 ├── requirements.txt                 
 ├── LICENSE   
 └── README.md  
