@@ -39,7 +39,7 @@ To replicate graphs all that is needed to run is model_comparisons.ipynb, since 
 
 **For full replication follow these steps:** <br/>
 
-***Must run contents of Main_Code folder first***
+*Must run contents of Main_Code folder first*
 
 1.	Run through create_alt_vector_stores.ipynb to create the alternate chroma db vector store
       a.	Ensure filings_path in cell 2 is set to the path of the files produced by cap_2_down.py
