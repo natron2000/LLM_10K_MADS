@@ -25,9 +25,8 @@ Enough computing power to run DeepSeek-R1
 │   ├── score_dicts                   # Scores of the RAG's responses  <br />
 │   ├── ChromaDB_Analysis.ipynb       # Analysis on ChromaDB chunking results  <br />
 │   ├── generate_response_dict.ipynb  # Feeds test question set into RAGs to produce files in response_dicts <br />
-│   ├── generate_score_dict.ipynb     # Evaluates the responses from response_dicts and stores the results in score_dicts  <br />
+│   ├── generate_score_dict.ipynb     # Evaluates the responses from response_dicts and stores the results in score_dicts <br />
 │   ├── model_comparisons.ipynb       # Graphs showing comparison of various RAG structures     
 ├── requirements.txt                 
 ├── LICENSE   
 └── README.md  
-
