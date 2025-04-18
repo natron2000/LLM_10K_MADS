@@ -58,11 +58,12 @@ To replicate comparison graphs all that is needed to run is model_comparisons.ip
 
 **For full replication follow these steps:** <br/>
 
-*Must run contents of Main_Code folder first*
+**Must run contents of Main_Code folder first.**<br/>
+*Required Ollama Models: all-minilm, llama3.2,deepseek-r1,and mistral-nemo*
 1.	Run through create_alt_vector_stores.ipynb to create the alternate chroma db vector store *(This file will take a long time to run)* <br/>
-   *Ensure file path in cell 2 is set to the path of the files produced by cap_2_down.py* <br />
+   Ensure file path in cell 2 is set to the path of the files produced by cap_2_down.py <br />
 2.	Run through generate_responses_dict.ipynb to create the response dictionaries to use for scoring <br />
-   *Ensure file paths in cell 2 are set to the correct location of vector stores* <br />
+   Ensure file paths in cell 2 are set to the correct location of vector stores <br />
 3.	Run through generate_score_dict.ipynb to score the responses and produce files in score_dicts <br />
 4.	Run through model_comparisons.ipynb to generate visuals of comparisons used in report<br />
 5.  Run ChromaDB_Analysis.ipynb to produce comparison files <br />
