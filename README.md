@@ -10,7 +10,7 @@ This project creates a framework to build a chat bot on top of a vector database
 
 Packages from the requirements.txt.
 Ollama program
-Enough computing power to run DeepSeek-R1
+Enough computing power to run Llama 3.2
 
 ## Package Structure
 
