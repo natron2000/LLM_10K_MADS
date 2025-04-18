@@ -54,14 +54,16 @@ Cap_4_chat is what launches our program. If you are using different models, be s
 ## Evaluation Instructions
 **Instructions for Evaluation:** <br/>
 
-To replicate graphs all that is needed to run is model_comparisons.ipynb, since all model scores are stored in the score_dicts folder.  The three other notebooks create the vector stores, files in the response_dicts folder, and produce the files in the score_dicts folder whcih are used in the model comparisons.<br/>
+To replicate comparison graphs all that is needed to run is model_comparisons.ipynb, since all model scores are stored in the score_dicts folder.  The three other notebooks create the vector stores, files in the response_dicts folder, and produce the files in the score_dicts folder whcih are used in the model comparisons.<br/>
 
 **For full replication follow these steps:** <br/>
 
 *Must run contents of Main_Code folder first*
 1.	Run through create_alt_vector_stores.ipynb to create the alternate chroma db vector store *(This file will take a long time to run)* <br/>
-              *Ensure file path in cell 2 is set to the path of the files produced by cap_2_down.py* <br />
+   *Ensure file path in cell 2 is set to the path of the files produced by cap_2_down.py* <br />
 2.	Run through generate_responses_dict.ipynb to create the response dictionaries to use for scoring <br />
-              *Ensure file paths in cell 2 are set to the correct location of vector stores* <br />
+   *Ensure file paths in cell 2 are set to the correct location of vector stores* <br />
 3.	Run through generate_score_dict.ipynb to score the responses and produce files in score_dicts <br />
 4.	Run through model_comparisons.ipynb to generate visuals of comparisons used in report<br />
+5.  Run ChromaDB_Analysis.ipynb to produce comparison files <br />
+    *Will need to ensure file paths match up to the correct filepaths produced by cap_3_down.py and create_alt_vector_stores.ipynb*
