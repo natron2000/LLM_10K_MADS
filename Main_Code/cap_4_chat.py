@@ -13,7 +13,7 @@ from langchain.chains import RetrievalQA
 from langchain_chroma import Chroma
 from langchain_ollama import OllamaEmbeddings
 
-OLLAMA_MODEL = "deepseek-r1"
+OLLAMA_MODEL = "llama3.2"
 OLLAMA_EMBEDDING_MODEL = "all-minilm"
 
 def start_ollama():
@@ -56,7 +56,7 @@ def get_tickers(collection_name="k-10s", persist_directory="./chroma_langchain_d
 
 def process_query(qa_chain, question):
     result = qa_chain.invoke({"query": question})
-    answer = result['result'].split("</think>\n\n")[1].strip()
+    answer = result['result'].strip()
     return answer
 
 def main():
@@ -71,7 +71,7 @@ def main():
         prompt = prompt_entry.get("1.0", tk.END).strip()
 
         # If User Make a Change Requiring Re-Running setup_retrieval_qa
-        if ticker != ticker_var.get() or k == num_docs_var.get():
+        if ticker != ticker_var.get() or k != num_docs_var.get():
             qa_chain = setup_retrieval_qa(ticker = ticker_var.get(), k = num_docs_var.get())
 
         response = process_query(qa_chain, prompt)
