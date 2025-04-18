@@ -30,3 +30,20 @@ Enough computing power to run DeepSeek-R1
 ├── requirements.txt                 
 ├── LICENSE   
 └── README.md  
+
+
+## Evaluation Instructions
+**Instructions for Evaluation:** <br/>
+
+To replicate graphs all that is needed to run is model_comparisons.ipynb, since all model scores are stored in the score_dicts folder.  The three other notebooks produce the files in the score_dicts folder.<br/>
+
+**For full replication follow these steps:** <br/>
+
+***Must run contents of Main_Code folder first***
+
+1.	Run through create_alt_vector_stores.ipynb to create the alternate chroma db vector store
+      a.	Ensure filings_path in cell 2 is set to the path of the files produced by cap_2_down.py
+2.	Run through generate_responses_dict.ipynb to create the response dictionaries to use for scoring
+      a.	Ensure file paths in cell 2 are set to the correct location of vector stores
+3.	Run through generate_score_dict.ipynb to score the responses and produce files in score_dicts
+4.	Run through model_comparisons.ipynb to generate visuals of comparisons used in report
