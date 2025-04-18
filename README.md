@@ -31,19 +31,37 @@ Enough computing power to run DeepSeek-R1
 ├── LICENSE   
 └── README.md  
 
+## RAG Model Instructions
+*To run through the main code there is a little bit of setup to do:* <br />
+
+**1. Ollama Setup** <br />
+First, download Ollama from their site. Next you will need to “pull” the models’ files. In our code we use all-minilm for embedding and llama3.2 for the large language model. Be sure your device 1- has the appropriate amount of space available to save the model and 2- has the appropriate amount of memory to 
+run the model. You can pull the models from your command prompt by running ollama pull [model name]. There is no need to “serve” the models yet, our python 
+code takes care of that. <br />
+
+**2. cap_1_meta.py** <br />
+Next you will want to install the libraries listed in the requirements file. For the first code file, cap_1_meta, we used a .env file to hold API key but you can hardcode it if you don’t feel like taking that extra step. You will need the API key to interact with the SEC files. Feel free to adjust the year ranges or even pull your own choice of companies. Those options can be tweaked within the python file itself. This file gathers all the necessary information to prepare for downloading the actual 10Ks.
+
+**3. cap_2_down.py** <br />
+The second file to run is cap_2_down. We again used a .env to setup the API key. This file gets the filings from the SEC and could take some time to run.
+
+**4. cap_3_store.py** <br />
+Cap_3_store builds out our vector database. It will handle launching Ollama, chunking the documents, embedding the chunks, and storing them with ChromaDB. If you decided to go with a different embedding model, be sure to adjust it within the main function. <br />
+
+**5. cap_4_chat.py** <br />
+Cap_4_chat is what launches our program. If you are using different models, be sure to adjust them. If you changed any file or directory names in the previous files, be sure to update them here as well.  A window should pop up after running this file where you can ask the RAG questions
 
 ## Evaluation Instructions
 **Instructions for Evaluation:** <br/>
 
-To replicate graphs all that is needed to run is model_comparisons.ipynb, since all model scores are stored in the score_dicts folder.  The three other notebooks produce the files in the score_dicts folder.<br/>
+To replicate graphs all that is needed to run is model_comparisons.ipynb, since all model scores are stored in the score_dicts folder.  The three other notebooks create the vector stores, files in the response_dicts folder, and produce the files in the score_dicts folder whcih are used in the model comparisons.<br/>
 
 **For full replication follow these steps:** <br/>
 
 *Must run contents of Main_Code folder first*
-
-1.	Run through create_alt_vector_stores.ipynb to create the alternate chroma db vector store
-      a.	Ensure filings_path in cell 2 is set to the path of the files produced by cap_2_down.py
-2.	Run through generate_responses_dict.ipynb to create the response dictionaries to use for scoring
-      a.	Ensure file paths in cell 2 are set to the correct location of vector stores
-3.	Run through generate_score_dict.ipynb to score the responses and produce files in score_dicts
-4.	Run through model_comparisons.ipynb to generate visuals of comparisons used in report
+1.	Run through create_alt_vector_stores.ipynb to create the alternate chroma db vector store *(This file will take a long time to run)* <br/>
+              *Ensure file path in cell 2 is set to the path of the files produced by cap_2_down.py* <br />
+2.	Run through generate_responses_dict.ipynb to create the response dictionaries to use for scoring <br />
+              *Ensure file paths in cell 2 are set to the correct location of vector stores* <br />
+3.	Run through generate_score_dict.ipynb to score the responses and produce files in score_dicts <br />
+4.	Run through model_comparisons.ipynb to generate visuals of comparisons used in report<br />
