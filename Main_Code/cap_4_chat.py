@@ -31,7 +31,7 @@ def start_ollama():
             print(f"Error starting Ollama: {e}")
             return False
 
-def setup_retrieval_qa(collection_name="k-10s", persist_directory="./chroma_langchain_db", embedding_model=OLLAMA_EMBEDDING_MODEL, 
+def setup_retrieval_qa(collection_name="k-10s", persist_directory="../chroma_langchain_db", embedding_model=OLLAMA_EMBEDDING_MODEL,
                        llm_model=OLLAMA_MODEL, template="""Use the following pieces of context to answer the 
                        question at the end. If you don't know the answer, just say that you don't know, don't try to make up 
                        an answer. Use 4 sentences maximum. Keep the answer as concise as possible. {context} Question: 
@@ -50,7 +50,7 @@ def setup_retrieval_qa(collection_name="k-10s", persist_directory="./chroma_lang
 
     return qa_chain
 
-def get_tickers(collection_name="k-10s", persist_directory="./chroma_langchain_db", embedding_model=OLLAMA_EMBEDDING_MODEL):
+def get_tickers(collection_name="k-10s", persist_directory="../chroma_langchain_db", embedding_model=OLLAMA_EMBEDDING_MODEL):
     db = Chroma(collection_name=collection_name, embedding_function=OllamaEmbeddings(model=embedding_model), persist_directory=persist_directory)
     return list(set([x.get('ticker') for x in db.get(include = ['metadatas']).get('metadatas')]))
 

@@ -76,7 +76,7 @@ def main():
         vector_store = Chroma(
             collection_name="k-10s",
             embedding_function=embeddings,
-            persist_directory="./chroma_langchain_db")
+            persist_directory="../chroma_langchain_db")
 
         for file in htm_files:
             process_html_file(file, embeddings, vector_store)
