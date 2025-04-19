@@ -1,15 +1,16 @@
 # LLM 10-K RAG
 
-A RAG system to provide accurate answers based off of 10-K reports from S&P 500 companes. 
+A RAG system to provide accurate answers based off of 10-K reports from S&P 500 companies. 
 
 ## Description
 
-This project creates a framework to build a chat bot on top of a vector database that helps answer questions on S&P 500 companies by retreving context from their 10-K reports that was submitted to the SEC. 
+This project creates a framework to build a chatbot on top of a vector database that helps answer questions on S&P 500 companies by retreving context from their 10-K reports that was submitted to the SEC. 
 
 ## Requirements
 
 Packages from the requirements.txt.
 Ollama program
+all-minilm & Llama 3.2 downloaded
 Enough computing power to run Llama 3.2
 
 ## Package Structure
