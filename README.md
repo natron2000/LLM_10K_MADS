@@ -69,3 +69,9 @@ To replicate comparison graphs all that is needed to run is model_comparisons.ip
 4.	Run through model_comparisons.ipynb to generate visuals of comparisons used in report<br />
 5.  Run ChromaDB_Analysis.ipynb to produce comparison files <br />
     *Will need to ensure file paths match up to the correct filepaths produced by cap_3_down.py and create_alt_vector_stores.ipynb*
+
+
+## Data Access
+
+List of SP500 companies came from iShares by BlackRock: https://www.ishares.com/us 
+SEC Filings came from the SEC-API by D2V https://sec-api.io/ 
