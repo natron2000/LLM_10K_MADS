@@ -73,7 +73,7 @@ To replicate comparison graphs all that is needed to run is model_comparisons.ip
 
 ## Data Access
 
-List of SP500 companies came from iShares by BlackRock: https://www.ishares.com/us 
+List of SP500 companies came from iShares by BlackRock: https://www.ishares.com/us. Additional terms & condition of the data can be found here: https://www.blackrock.com/corporate/compliance/terms-and-conditions 
 
 SEC Filings came from the SEC-API by D2V https://sec-api.io/ 
 
