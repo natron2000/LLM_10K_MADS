@@ -76,3 +76,5 @@ To replicate comparison graphs all that is needed to run is model_comparisons.ip
 List of SP500 companies came from iShares by BlackRock: https://www.ishares.com/us 
 
 SEC Filings came from the SEC-API by D2V https://sec-api.io/ 
+
+This project is for educational/research purposes only. 
