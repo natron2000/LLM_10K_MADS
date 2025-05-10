@@ -111,10 +111,7 @@ def main():
 
     root.mainloop()
     
-    
-    
-#qa_chain = setup_retrieval_qa() #Delete
-#test=process_query(qa_chain, 'how has covid impacted our business') #Delete
+
 
 if __name__ == "__main__":
     main()
